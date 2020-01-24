@@ -9,18 +9,28 @@ namespace WindowsFormsTest
     class DefaultClass
     {
         private int[] array;
+        private int size = 0;
+
+        public DefaultClass(int N)
+        {
+            Random rand = new Random();
+            if (N < 10)
+            {               
+                size = rand.Next(10, 20);
+            } else
+            {
+                size = N;
+            }
+            array = new int[size];
+            for (int i = 0; i < size; ++i)
+            {
+                array[i] = rand.Next(1, 10);
+            }
+        }
         public string ChetSum(int N)
         {
             string str = "";
             int sum = 0;
-            if (array == null)
-            {
-                array = new int[N];
-                Random rand = new Random();
-                for (int i = 0; i < N; ++i)
-                {
-                    array[i] = rand.Next(1, 10);
-                }
                 for (int i = 0; i < N; ++i)
                 {
                     if ((array[i] > 0) && (array[i] % 2 == 0))
@@ -30,58 +40,27 @@ namespace WindowsFormsTest
                 }
                 str += sum;
                 return str;
-            } else
-            {
-                for (int j = 0; j < N; ++j)
-                {
-                    if ((array[j] > 0) && (array[j] % 2 == 0))
-                    {
-                        sum++;
-                    }
-                }
-                str += sum;
-                return str;
-            }
-            
         }
-
-        public string NeChetSum(int N)
-        {
+        //NeChet
+        public string ChetSum()
+        {   
             string str = "";
             int sum = 0;
-            if (array == null)
-            {
-                array = new int[N];
-                Random rand = new Random();
-                for (int i = 0; i < N; ++i)
+                for (int i = 0; i < array.Length; ++i)
                 {
-                    array[i] = rand.Next(1, 10);
-                }
-                for (int i = 0; i < N; ++i)
-                {
-                    if ((array[i] > N) && (array[i] % 2 != 0))
+                    if ((array[i] > array.Length) && (array[i] % 2 != 0))
                     {
                         sum++;
                     }
                 }
-            } else
-            {
-                for (int j = 0; j < N; ++j)
-                {
-                    if ((array[j] > N) && (array[j] % 2 != 0))
-                    {
-                        sum++;
-                    }
-                }
-            }
             str += sum;
             return str;
         }
 
-        public string PrintArray(int N)
+        public string PrintArray()
         {
             string str = "";
-            for(int i = 0; i < N; ++i)
+            for(int i = 0; i < array.Length; ++i)
             {
                 str += array[i];
             }

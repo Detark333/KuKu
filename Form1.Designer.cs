@@ -86,7 +86,7 @@
             // 
             this.ArraytextBox.Location = new System.Drawing.Point(231, 3);
             this.ArraytextBox.Name = "ArraytextBox";
-            this.ArraytextBox.Size = new System.Drawing.Size(100, 20);
+            this.ArraytextBox.Size = new System.Drawing.Size(210, 20);
             this.ArraytextBox.TabIndex = 5;
             // 
             // Form1

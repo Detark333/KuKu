@@ -13,6 +13,7 @@ namespace WindowsFormsTest
 {
     public partial class Form1 : Form
     {
+        int size;
         public Form1()
         {
             InitializeComponent();
@@ -20,24 +21,20 @@ namespace WindowsFormsTest
         DefaultClass cl1;
         private void Createbutton_Click(object sender, EventArgs e)
         {
-            cl1 = new DefaultClass();
-            
+            cl1 = new DefaultClass(Convert.ToInt32(ReadtextBox.Text));
+            ArraytextBox.Text = cl1.PrintArray();
         }
 
         private void ChetSumButton_Click(object sender, EventArgs e)
         {
-            int size = Convert.ToInt32(ReadtextBox.Text);
-            OutputtextBox.Text = cl1.ChetSum(size);
-            ArraytextBox.Text = cl1.PrintArray(size);
-
+            OutputtextBox.Text = cl1.ChetSum(ArraytextBox.Text.Length);
+            ArraytextBox.Text = cl1.PrintArray();
         }
 
         private void NeChetbutton_Click(object sender, EventArgs e)
-        {
-            int size = Convert.ToInt32(ReadtextBox.Text);
-            OutputtextBox.Text = cl1.NeChetSum(size);
-            ArraytextBox.Text = cl1.PrintArray(size);
-
+        { 
+            OutputtextBox.Text = cl1.ChetSum();
+            ArraytextBox.Text = cl1.PrintArray();
         }
     }
 }
