@@ -6,6 +6,8 @@ using System.Windows.Forms;
 
 namespace WindowsFormsTest
 {
+    public delegate string myDelegate(int x);
+    public delegate string myDelegate2();
     static class Program
     {
         /// <summary>

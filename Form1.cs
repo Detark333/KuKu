@@ -16,7 +16,8 @@ namespace WindowsFormsTest
         int size;
         int sizeList;
         List<InterfaceIndex> listBox;
-
+        public event myDelegate event1;
+        public event myDelegate2 event2;
         Random rand = new Random();
         public Form1()
         {
@@ -100,6 +101,36 @@ namespace WindowsFormsTest
         {
             OutputtextBox.Text = cl2.ChetSum();
             ArraytextBox.Text = PrintArray(cl2);
+        }
+
+        private void InsertFirstM_Click(object sender, EventArgs e)
+        {
+            event1 += listBox.ElementAt(listBoxClasses.SelectedIndex).ChetSum;
+        }
+
+        private void DeleteFirstM_Click(object sender, EventArgs e)
+        {
+            event1 -= listBox.ElementAt(listBoxClasses.SelectedIndex).ChetSum;
+        }
+
+        private void InsertSecondM_Click(object sender, EventArgs e)
+        {
+            event2 += listBox.ElementAt(listBoxClasses.SelectedIndex).ChetSum;
+        }
+
+        private void DeleteSecondM_Click(object sender, EventArgs e)
+        {
+            event2 -= listBox.ElementAt(listBoxClasses.SelectedIndex).ChetSum;
+        }
+
+        private void EventFirst_Click(object sender, EventArgs e)
+        {
+            richTextBox.Text += event1?.Invoke(Convert.ToInt32(ReadtextBox.Text));
+        }
+
+        private void EventSecond_Click(object sender, EventArgs e)
+        {
+            richTextBox.Text += event2?.Invoke();
         }
     }
 }
