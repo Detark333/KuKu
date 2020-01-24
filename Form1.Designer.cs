@@ -38,6 +38,13 @@
             this.ChetbuttonList = new System.Windows.Forms.Button();
             this.NeChetbuttonList = new System.Windows.Forms.Button();
             this.listBoxClasses = new System.Windows.Forms.ListBox();
+            this.richTextBox = new System.Windows.Forms.RichTextBox();
+            this.InsertFirstM = new System.Windows.Forms.Button();
+            this.DeleteFirstM = new System.Windows.Forms.Button();
+            this.InsertSecondM = new System.Windows.Forms.Button();
+            this.DeleteSecondM = new System.Windows.Forms.Button();
+            this.EventFirst = new System.Windows.Forms.Button();
+            this.EventSecond = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Createbutton
@@ -133,11 +140,86 @@
             this.listBoxClasses.Size = new System.Drawing.Size(304, 147);
             this.listBoxClasses.TabIndex = 9;
             // 
+            // richTextBox
+            // 
+            this.richTextBox.Location = new System.Drawing.Point(116, 110);
+            this.richTextBox.Name = "richTextBox";
+            this.richTextBox.Size = new System.Drawing.Size(313, 305);
+            this.richTextBox.TabIndex = 10;
+            this.richTextBox.Text = "";
+            // 
+            // InsertFirstM
+            // 
+            this.InsertFirstM.Location = new System.Drawing.Point(463, 280);
+            this.InsertFirstM.Name = "InsertFirstM";
+            this.InsertFirstM.Size = new System.Drawing.Size(75, 23);
+            this.InsertFirstM.TabIndex = 17;
+            this.InsertFirstM.Text = "InsertFirstM";
+            this.InsertFirstM.UseVisualStyleBackColor = true;
+            this.InsertFirstM.Click += new System.EventHandler(this.InsertFirstM_Click);
+            // 
+            // DeleteFirstM
+            // 
+            this.DeleteFirstM.Location = new System.Drawing.Point(463, 309);
+            this.DeleteFirstM.Name = "DeleteFirstM";
+            this.DeleteFirstM.Size = new System.Drawing.Size(75, 23);
+            this.DeleteFirstM.TabIndex = 18;
+            this.DeleteFirstM.Text = "DeleteFirstM";
+            this.DeleteFirstM.UseVisualStyleBackColor = true;
+            this.DeleteFirstM.Click += new System.EventHandler(this.DeleteFirstM_Click);
+            // 
+            // InsertSecondM
+            // 
+            this.InsertSecondM.Location = new System.Drawing.Point(573, 280);
+            this.InsertSecondM.Name = "InsertSecondM";
+            this.InsertSecondM.Size = new System.Drawing.Size(91, 23);
+            this.InsertSecondM.TabIndex = 19;
+            this.InsertSecondM.Text = "InsertSecondM";
+            this.InsertSecondM.UseVisualStyleBackColor = true;
+            this.InsertSecondM.Click += new System.EventHandler(this.InsertSecondM_Click);
+            // 
+            // DeleteSecondM
+            // 
+            this.DeleteSecondM.Location = new System.Drawing.Point(573, 309);
+            this.DeleteSecondM.Name = "DeleteSecondM";
+            this.DeleteSecondM.Size = new System.Drawing.Size(91, 23);
+            this.DeleteSecondM.TabIndex = 20;
+            this.DeleteSecondM.Text = "DeleteSecondM";
+            this.DeleteSecondM.UseVisualStyleBackColor = true;
+            this.DeleteSecondM.Click += new System.EventHandler(this.DeleteSecondM_Click);
+            // 
+            // EventFirst
+            // 
+            this.EventFirst.Location = new System.Drawing.Point(687, 280);
+            this.EventFirst.Name = "EventFirst";
+            this.EventFirst.Size = new System.Drawing.Size(91, 23);
+            this.EventFirst.TabIndex = 21;
+            this.EventFirst.Text = "EventFirst";
+            this.EventFirst.UseVisualStyleBackColor = true;
+            this.EventFirst.Click += new System.EventHandler(this.EventFirst_Click);
+            // 
+            // EventSecond
+            // 
+            this.EventSecond.Location = new System.Drawing.Point(687, 309);
+            this.EventSecond.Name = "EventSecond";
+            this.EventSecond.Size = new System.Drawing.Size(91, 23);
+            this.EventSecond.TabIndex = 22;
+            this.EventSecond.Text = "EventSecond";
+            this.EventSecond.UseVisualStyleBackColor = true;
+            this.EventSecond.Click += new System.EventHandler(this.EventSecond_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.EventSecond);
+            this.Controls.Add(this.EventFirst);
+            this.Controls.Add(this.DeleteSecondM);
+            this.Controls.Add(this.InsertSecondM);
+            this.Controls.Add(this.DeleteFirstM);
+            this.Controls.Add(this.InsertFirstM);
+            this.Controls.Add(this.richTextBox);
             this.Controls.Add(this.listBoxClasses);
             this.Controls.Add(this.NeChetbuttonList);
             this.Controls.Add(this.ChetbuttonList);
@@ -167,6 +249,13 @@
         private System.Windows.Forms.Button ChetbuttonList;
         private System.Windows.Forms.Button NeChetbuttonList;
         private System.Windows.Forms.ListBox listBoxClasses;
+        private System.Windows.Forms.RichTextBox richTextBox;
+        private System.Windows.Forms.Button InsertFirstM;
+        private System.Windows.Forms.Button DeleteFirstM;
+        private System.Windows.Forms.Button InsertSecondM;
+        private System.Windows.Forms.Button DeleteSecondM;
+        private System.Windows.Forms.Button EventFirst;
+        private System.Windows.Forms.Button EventSecond;
     }
 }
 

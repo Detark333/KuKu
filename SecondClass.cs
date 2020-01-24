@@ -10,7 +10,6 @@ namespace WindowsFormsTest
     {
         private List<int> list;
         private int size = 0;
-
         public string Name { get => "SecondClass " + size; }
 
         public int this[int index]

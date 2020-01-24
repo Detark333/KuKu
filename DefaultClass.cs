@@ -10,7 +10,8 @@ namespace WindowsFormsTest
     {
         private int[] array;
         private int size = 0;
-
+        public event myDelegate event1;
+        public event myDelegate2 event2;
         public DefaultClass(int N)
         {
             Random rand = new Random();
