@@ -6,27 +6,23 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsTest
 {
-    class DefaultClass
+    public class DefaultClass : InterfaceIndex
     {
         private int[] array;
         private int size = 0;
-
         public DefaultClass(int N)
         {
             Random rand = new Random();
-            if (N < 10)
-            {               
-                size = rand.Next(10, 20);
-            } else
-            {
-                size = N;
-            }
+            size = N;
             array = new int[size];
             for (int i = 0; i < size; ++i)
             {
                 array[i] = rand.Next(1, 10);
             }
         }
+
+        public int this[int index] { get => array[index]; set => array[index] = value; }
+
         public string ChetSum(int N)
         {
             string str = "";
@@ -43,27 +39,17 @@ namespace WindowsFormsTest
         }
         //NeChet
         public string ChetSum()
-        {   
+        {
             string str = "";
             int sum = 0;
                 for (int i = 0; i < array.Length; ++i)
                 {
-                    if ((array[i] > array.Length) && (array[i] % 2 != 0))
+                    if ((array[i] > size) && (array[i] % 2 != 0))
                     {
                         sum++;
                     }
                 }
             str += sum;
-            return str;
-        }
-
-        public string PrintArray()
-        {
-            string str = "";
-            for(int i = 0; i < array.Length; ++i)
-            {
-                str += array[i];
-            }
             return str;
         }
     }
