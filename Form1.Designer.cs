@@ -34,6 +34,9 @@
             this.OutputtextBox = new System.Windows.Forms.TextBox();
             this.NeChetbutton = new System.Windows.Forms.Button();
             this.ArraytextBox = new System.Windows.Forms.TextBox();
+            this.CreatebuttonList = new System.Windows.Forms.Button();
+            this.ChetbuttonList = new System.Windows.Forms.Button();
+            this.NeChetbuttonList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Createbutton
@@ -89,11 +92,46 @@
             this.ArraytextBox.Size = new System.Drawing.Size(210, 20);
             this.ArraytextBox.TabIndex = 5;
             // 
+            // CreatebuttonList
+            // 
+            this.CreatebuttonList.Location = new System.Drawing.Point(463, 3);
+            this.CreatebuttonList.Name = "CreatebuttonList";
+            this.CreatebuttonList.Size = new System.Drawing.Size(104, 23);
+            this.CreatebuttonList.TabIndex = 6;
+            this.CreatebuttonList.Text = "CreateList";
+            this.CreatebuttonList.UseVisualStyleBackColor = true;
+            this.CreatebuttonList.Click += new System.EventHandler(this.CreatebuttonList_Click);
+            // 
+            // ChetbuttonList
+            // 
+            this.ChetbuttonList.Location = new System.Drawing.Point(463, 32);
+            this.ChetbuttonList.Name = "ChetbuttonList";
+            this.ChetbuttonList.Size = new System.Drawing.Size(104, 23);
+            this.ChetbuttonList.TabIndex = 7;
+            this.ChetbuttonList.Text = "ChetSumList";
+            this.ChetbuttonList.UseCompatibleTextRendering = true;
+            this.ChetbuttonList.UseVisualStyleBackColor = true;
+            this.ChetbuttonList.Click += new System.EventHandler(this.ChetbuttonList_Click);
+            // 
+            // NeChetbuttonList
+            // 
+            this.NeChetbuttonList.Location = new System.Drawing.Point(463, 61);
+            this.NeChetbuttonList.Name = "NeChetbuttonList";
+            this.NeChetbuttonList.Size = new System.Drawing.Size(104, 23);
+            this.NeChetbuttonList.TabIndex = 8;
+            this.NeChetbuttonList.Text = "NeChetSumList";
+            this.NeChetbuttonList.UseCompatibleTextRendering = true;
+            this.NeChetbuttonList.UseVisualStyleBackColor = true;
+            this.NeChetbuttonList.Click += new System.EventHandler(this.NeChetbuttonList_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.NeChetbuttonList);
+            this.Controls.Add(this.ChetbuttonList);
+            this.Controls.Add(this.CreatebuttonList);
             this.Controls.Add(this.ArraytextBox);
             this.Controls.Add(this.NeChetbutton);
             this.Controls.Add(this.OutputtextBox);
@@ -115,6 +153,9 @@
         private System.Windows.Forms.TextBox OutputtextBox;
         private System.Windows.Forms.Button NeChetbutton;
         private System.Windows.Forms.TextBox ArraytextBox;
+        private System.Windows.Forms.Button CreatebuttonList;
+        private System.Windows.Forms.Button ChetbuttonList;
+        private System.Windows.Forms.Button NeChetbuttonList;
     }
 }
 
