@@ -10,6 +10,7 @@ namespace WindowsFormsTest
     {
         private int[] array;
         private int size = 0;
+
         public DefaultClass(int N)
         {
             Random rand = new Random();
@@ -22,6 +23,9 @@ namespace WindowsFormsTest
         }
 
         public int this[int index] { get => array[index]; set => array[index] = value; }
+
+        public string Name { get => "DefaultClass " + size ; }
+
 
         public string ChetSum(int N)
         {
@@ -51,6 +55,10 @@ namespace WindowsFormsTest
                 }
             str += sum;
             return str;
+        }
+        public override string ToString()
+        {
+            return Name;
         }
     }
 }

@@ -37,6 +37,7 @@
             this.CreatebuttonList = new System.Windows.Forms.Button();
             this.ChetbuttonList = new System.Windows.Forms.Button();
             this.NeChetbuttonList = new System.Windows.Forms.Button();
+            this.listBoxClasses = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // Createbutton
@@ -124,11 +125,20 @@
             this.NeChetbuttonList.UseVisualStyleBackColor = true;
             this.NeChetbuttonList.Click += new System.EventHandler(this.NeChetbuttonList_Click);
             // 
+            // listBoxClasses
+            // 
+            this.listBoxClasses.FormattingEnabled = true;
+            this.listBoxClasses.Location = new System.Drawing.Point(463, 110);
+            this.listBoxClasses.Name = "listBoxClasses";
+            this.listBoxClasses.Size = new System.Drawing.Size(304, 147);
+            this.listBoxClasses.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listBoxClasses);
             this.Controls.Add(this.NeChetbuttonList);
             this.Controls.Add(this.ChetbuttonList);
             this.Controls.Add(this.CreatebuttonList);
@@ -156,6 +166,7 @@
         private System.Windows.Forms.Button CreatebuttonList;
         private System.Windows.Forms.Button ChetbuttonList;
         private System.Windows.Forms.Button NeChetbuttonList;
+        private System.Windows.Forms.ListBox listBoxClasses;
     }
 }
 

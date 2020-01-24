@@ -10,7 +10,9 @@ namespace WindowsFormsTest
     {
         private List<int> list;
         private int size = 0;
-        DefaultClass test;
+
+        public string Name { get => "SecondClass " + size; }
+
         public int this[int index]
         {
             get
@@ -25,6 +27,7 @@ namespace WindowsFormsTest
         public SecondClass(int N)
         {
             Random rand = new Random();
+            size = N;
             list = new List<int> { };
             for (int i = 0; i < N; ++i)
             {
@@ -59,6 +62,10 @@ namespace WindowsFormsTest
             }
             str += sum;
             return str;
+        }
+        public override string ToString()
+        {
+            return Name;
         }
     }
 }

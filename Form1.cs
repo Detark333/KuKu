@@ -14,15 +14,34 @@ namespace WindowsFormsTest
     public partial class Form1 : Form
     {
         int size;
+        int sizeList;
+        List<InterfaceIndex> listBox;
+
+        Random rand = new Random();
         public Form1()
         {
             InitializeComponent();
+            listBox = new List<InterfaceIndex>();
+            int first = rand.Next(5,10);
+            int second = rand.Next(5, 10);
+            for(int i = 0; i < first; ++i)
+            {
+                listBox.Add(new DefaultClass(rand.Next(10, 20)));
+            }
+            for (int i = 0; i < second; ++i)
+            {
+                listBox.Add(new SecondClass(rand.Next(10, 20)));
+            }
+
+            foreach (var item in listBox)
+            {
+                listBoxClasses.Items.Add(item);
+            }
         }
         DefaultClass cl1;
         SecondClass cl2;
         private void Createbutton_Click(object sender, EventArgs e)
-        {
-            Random rand = new Random();
+        {         
             if (Convert.ToInt32(ReadtextBox.Text) < 10)
             {
                 size = rand.Next(10, 20);
@@ -32,6 +51,7 @@ namespace WindowsFormsTest
                 size = Convert.ToInt32(ReadtextBox.Text);
             }
             cl1 = new DefaultClass(size);
+            
             ArraytextBox.Text = PrintArray(cl1);
         }
 
@@ -58,16 +78,15 @@ namespace WindowsFormsTest
 
         private void CreatebuttonList_Click(object sender, EventArgs e)
         {
-            Random rand = new Random();
             if (Convert.ToInt32(ReadtextBox.Text) < 10)
             {
-                size = rand.Next(10, 20);
+                sizeList = rand.Next(10, 20);
             }
             else
             {
-                size = Convert.ToInt32(ReadtextBox.Text);
+                sizeList = Convert.ToInt32(ReadtextBox.Text);
             }
-            cl2 = new SecondClass(size);
+            cl2 = new SecondClass(sizeList);
             ArraytextBox.Text = PrintArray(cl2);
         }
 
